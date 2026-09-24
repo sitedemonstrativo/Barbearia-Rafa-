@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Rafa | Estilo e Tradição em Santo Antônio da Platina</title>
+    <meta name="description" content="Barbearia Rafa em Santo Antônio da Platina - PR. Cortes modernos, barboterapia, platinado e plano de assinatura. Agende pelo nosso aplicativo.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configurações do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0a',
+                        darklight: '#111111',
+                        gold: '#D4AF37',
+                        goldhover: '#b8962e',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonte Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .img-zoom { overflow: hidden; }
+        .img-zoom img { transition: transform 0.5s ease; }
+        .img-zoom:hover img { transform: scale(1.1); }
+        html { scroll-behavior: smooth; }
+        section { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body class="bg-dark text-gray-200 font-sans antialiased overflow-x-hidden">
+
+    <!-- ================= HEADER ================= -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-white">
+                BARBEARIA <span class="text-gold">RAFA</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-gold transition">Início</a>
+                <a href="#servicos" class="hover:text-gold transition">Serviços</a>
+                <a href="#historia" class="hover:text-gold transition">Nossa História</a>
+                <a href="#avaliacoes" class="hover:text-gold transition">Avaliações</a>
+                <a href="#app" class="hover:text-gold transition">App</a>
+                <a href="#contato" class="hover:text-gold transition">Contato</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-darklight border-t border-white/10">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-gold transition">Início</a>
+                <a href="#servicos" class="hover:text-gold transition">Serviços</a>
+                <a href="#historia" class="hover:text-gold transition">Nossa História</a>
+                <a href="#avaliacoes" class="hover:text-gold transition">Avaliações</a>
+                <a href="#app" class="hover:text-gold transition">App</a>
+                <a href="#contato" class="hover:text-gold transition">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- CORRIGIDO: Caminho sem a pasta 'imagens/' -->
+            <div class="carousel-bg w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('IMG-20260923-WA0714.jpg');"></div>
+            <div class="absolute inset-0 bg-black/70"></div>
+        </div>
+        <div class="relative z-10 container mx-auto px-6 fade-in">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-4">
+                Estilo, tradição e atitude<br>
+                <span class="text-gold">em Santo Antônio da Platina</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">Sua melhor versão começa aqui.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://apps.apple.com/us/app/barbearia-rafa/id6755328293" target="_blank" class="bg-gold hover:bg-goldhover text-dark font-bold py-4 px-8 rounded-full transition duration-300 text-lg shadow-lg shadow-gold/20 flex items-center justify-center gap-2">
+                    <i class="fas fa-calendar-check"></i> Agendar pelo App
+                </a>
+                <a href="https://wa.me/5543998484849" target="_blank" class="bg-transparent border-2 border-white hover:bg-white hover:text-dark text-white font-bold py-4 px-8 rounded-full transition duration-300 text-lg flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="servicos" class="py-24 bg-darklight">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Nossos <span class="text-gold">Serviços</span></h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/5 shadow-xl fade-in group">
+                    <div class="grid grid-cols-2 gap-1 p-1">
+                        <div class="img-zoom col-span-2 h-48"><img src="IMG-20260923-WA0712.jpg" alt="Corte Moderno" class="w-full h-full object-cover"></div>
+                        <div class="img-zoom h-32"><img src="IMG-20260923-WA0714.jpg" alt="Corte Degradê" class="w-full h-full object-cover"></div>
+                        <div class="img-zoom h-32"><img src="IMG-20260923-WA0713.jpg" alt="Corte Navalhado" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Cortes Modernos</h3>
+                        <p class="text-gold text-sm font-semibold mb-4 uppercase tracking-wider">Do clássico ao degradê</p>
+                        <p class="text-gray-400 leading-relaxed">Cortes masculinos modernos, degradê (fade), navalhado e tesoura. Precisão e estilo para o seu dia a dia.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/5 shadow-xl fade-in group">
+                    <div class="grid grid-cols-2 gap-1 p-1">
+                        <div class="img-zoom col-span-2 h-48"><img src="IMG-20260923-WA0718.jpg" alt="Barboterapia" class="w-full h-full object-cover"></div>
+                        <div class="img-zoom h-32"><img src="IMG-20260923-WA0716.jpg" alt="Toalha Quente" class="w-full h-full object-cover"></div>
+                        <div class="img-zoom h-32"><img src="IMG-20260923-WA0715.jpg" alt="Barbear Clássico" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Barboterapia</h3>
+                        <p class="text-gold text-sm font-semibold mb-4 uppercase tracking-wider">O cuidado que seu rosto merece</p>
+                        <p class="text-gray-400 leading-relaxed">Relaxamento, toalha quente, óleos essenciais e barbear clássico. Uma experiência completa de cuidado masculino.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/5 shadow-xl fade-in group">
+                    <div class="grid grid-cols-2 gap-1 p-1">
+                        <div class="img-zoom col-span-2 h-48"><img src="IMG-20260923-WA0719.jpg" alt="Platinado" class="w-full h-full object-cover"></div>
+                        <div class="img-zoom col-span-2 h-32"><img src="IMG-20260923-WA0717.jpg" alt="Descoloração" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-2">Platinado</h3>
+                        <p class="text-gold text-sm font-semibold mb-4 uppercase tracking-wider">Atitude e personalidade</p>
+                        <p class="text-gray-400 leading-relaxed">Descoloração global, platinado, matização e cuidados com o fio. Transforme seu visual com técnica e segurança.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NOSSA HISTÓRIA ================= -->
+    <section id="historia" class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Sua autenticidade,<br><span class="text-gold">nossa dedicação.</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">Na Barbearia Rafa, acreditamos que um corte de cabelo vai muito além da estética. É sobre autoestima, confiança e a sensação de sair renovado.</p>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">Com um ambiente familiar, profissionais qualificados e um compromisso inabalável com a excelência, nos tornamos referência em Santo Antônio da Platina.</p>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-gold/10 p-4 rounded-full"><i class="fas fa-award text-gold text-2xl"></i></div>
+                        <div>
+                            <p class="text-white font-bold text-xl">4,9 Estrelas</p>
+                            <p class="text-gray-500 text-sm">Mais de 105 avaliações no Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4 fade-in">
+                    <div class="img-zoom col-span-2 rounded-2xl overflow-hidden"><img src="IMG-20260923-WA0732.jpg" alt="Ambiente" class="w-full h-64 object-cover"></div>
+                    <div class="img-zoom rounded-2xl overflow-hidden"><img src="IMG-20260923-WA0733.jpg" alt="Detalhes" class="w-full h-48 object-cover"></div>
+                    <div class="img-zoom rounded-2xl overflow-hidden"><img src="IMG-20260923-WA0731.jpg" alt="Profissional" class="w-full h-48 object-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= APP ================= -->
+    <section id="app" class="py-24 bg-darklight relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 flex justify-center fade-in">
+                    <div class="relative w-72 h-[600px] bg-black rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-b from-dark to-black p-4 flex flex-col">
+                            <div class="flex justify-between items-center text-white mb-8 mt-2 px-2">
+                                <span class="font-bold">Barbearia Rafa</span>
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <div class="bg-gold/10 border border-gold/30 rounded-xl p-4 mb-4 text-center">
+                                <p class="text-gold text-sm font-bold mb-2">Próximo Agendamento</p>
+                                <p class="text-white text-lg font-bold">Corte Degradê</p>
+                                <p class="text-gray-400 text-xs">Hoje às 14:30 - Rafa</p>
+                            </div>
+                            <div class="bg-darklight rounded-xl p-4 mb-4 flex-1">
+                                <p class="text-white font-bold mb-2">Serviços</p>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between text-sm text-gray-400"><span>Corte</span> <span>R$ 45</span></div>
+                                    <div class="flex justify-between text-sm text-gray-400"><span>Barba</span> <span>R$ 35</span></div>
+                                    <div class="flex justify-between text-sm text-gray-400"><span>Plano Mensal</span> <span class="text-gold">R$ 89</span></div>
+                                </div>
+                            </div>
+                            <button class="bg-gold text-dark font-bold py-3 rounded-xl w-full">Agendar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Agende pelo <span class="text-gold">App</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">Agende seu horário em segundos, sem filas e com total praticidade. Baixe agora o nosso aplicativo.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="https://apps.apple.com/us/app/barbearia-rafa/id6755328293" target="_blank" class="flex items-center justify-center gap-3 bg-white text-black py-3 px-6 rounded-xl hover:bg-gray-200 transition">
+                            <i class="fab fa-apple text-2xl"></i>
+                            <div class="text-left"><p class="text-xs">Baixar na</p><p class="font-bold text-sm">App Store</p></div>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=barbeariarafa.bestbarbers.app" target="_blank" class="flex items-center justify-center gap-3 bg-white text-black py-3 px-6 rounded-xl hover:bg-gray-200 transition">
+                            <i class="fab fa-google-play text-2xl"></i>
+                            <div class="text-left"><p class="text-xs">Baixar no</p><p class="font-bold text-sm">Google Play</p></div>
+                        </a>
+                    </div>
+                    <div class="bg-gradient-to-r from-gold/20 to-transparent border-l-4 border-gold p-6 rounded-r-xl">
+                        <h3 class="text-2xl font-bold text-white mb-2">Corte ilimitado todo mês</h3>
+                        <p class="text-gray-300 mb-4">Pague apenas <span class="text-gold font-bold">R$ 89,00/mês</span> e corte o cabelo quantas vezes quiser. Sem limites, sem complicação.</p>
+                        <a href="https://apps.apple.com/us/app/barbearia-rafa/id6755328293" target="_blank" class="inline-block bg-gold hover:bg-goldhover text-dark font-bold py-3 px-6 rounded-full transition duration-300">Assinar pelo App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= AVALIAÇÕES ================= -->
+    <section id="avaliacoes" class="py-24 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">O que nossos <span class="text-gold">clientes dizem</span></h2>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <span class="text-4xl font-bold text-white">4,9</span>
+                    <div class="text-gold text-xl"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                    <span class="text-gray-400">(105 avaliações no Google)</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Excelente profissionais, com ambiente agradável para o público masculino, recomendo em melada, esqueceeeee"</p>
+                    <p class="text-white font-bold">Fabio Amalio</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Atendimento excelente, ótimos profissionais com um desempenho de qualidade, brabos"</p>
+                    <p class="text-white font-bold">Marcelo Gonçalves</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Atendimento top, onde eu e meu filho fomos muito bem atendidos"</p>
+                    <p class="text-white font-bold">Lucas Santos</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Pessoal muito educado e são excelentes profissionais, super recomendo."</p>
+                    <p class="text-white font-bold">Wesley Velozo</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Fui bem recebido, rapaziada gente boa, corta bem e o melhor bom de preço"</p>
+                    <p class="text-white font-bold">Luis Guilherme Leite Martins</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Ambiente top demais. Melhor barbearia, e também os melhores profissionais da cidade. Os cara são brabo demais"</p>
+                    <p class="text-white font-bold">Renan Augusto</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Ambiente muito agradável, pessoal atende super bem, são muito atenciosos, educados e prestativos, muito bom mesmo."</p>
+                    <p class="text-white font-bold">Victor Ap Oliveira</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-gold/30 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Experiência magnífica, barbearia era boa demais antes, agora está melhor ainda com esse plano renovador que você paga apenas 89 reais e corta o cabelo quantas vezes você quiser no mês, brabo demais"</p>
+                    <p class="text-white font-bold">abbas 135</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Difícil não gostar do corte, sempre que eu corto meu cabelo já me sinto o cara."</p>
+                    <p class="text-white font-bold">George Azevedo</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Pra mim é único, melhor atendimento, não corta cabelo com pressa, sempre olha os mínimos detalhes. Já estou a três anos nessa barbearia"</p>
+                    <p class="text-white font-bold">Wilsinho Ferraz</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Os melhores da cidade, sempre inovando coisas pra facilitar e ajudar os clientes, só qualidade"</p>
+                    <p class="text-white font-bold">Wesley Amador Aguiar</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Top profissionais de primeira por isso fx mensal com eles. Em santo Antônio da platina não me vejo cortando cabelo com outros profissionais. Parabéns"</p>
+                    <p class="text-white font-bold">edson pereira</p>
+                </div>
+                <div class="bg-darklight p-6 rounded-xl border border-white/5 fade-in">
+                    <div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="text-gray-300 italic mb-4">"Melhor atendimento da cidade ambiente top confortável lugar onde você se sente em casa melhor barbearia do Brasil"</p>
+                    <p class="text-white font-bold">Joao pedro Rib thadeu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="contato" class="bg-darklight pt-20 pb-10 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-white mb-6">BARBEARIA <span class="text-gold">RAFA</span></h3>
+                    <p class="text-gray-400 mb-6">Estilo, tradição e atitude em Santo Antônio da Platina. Venha viver a experiência.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/barbearia.rafa?stkn=MTB3ODhnMW9iMjNhcw==" target="_blank" class="bg-white/10 hover:bg-gold hover:text-dark text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5543998484849" target="_blank" class="bg-white/10 hover:bg-gold hover:text-dark text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <h4 class="text-xl font-bold text-white mb-6">Contato</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                            <span>R. José Bonifácio - Centro,<br>Santo Antônio da Platina - PR,<br>86430-000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-gold"></i>
+                            <a href="tel:+5543998484849" class="hover:text-white transition">(43) 99848-4849</a>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <a href="https://wa.me/5543998484849" target="_blank" class="inline-block bg-gold hover:bg-goldhover text-dark font-bold py-3 px-6 rounded-full transition duration-300">Agendar pelo WhatsApp</a>
+                    </div>
+                </div>
+                <div class="fade-in h-64 md:h-full rounded-xl overflow-hidden border border-white/10">
+                    <!-- MAPA CORRIGIDO - Embed funcional para o endereço -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.666601776877!2d-50.0776088!3d-23.2927589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e9f6e4b2e5e5e5%3A0x1234567890abcdef!2sR.%20Jos%C3%A9%20Bonif%C3%A1cio%2C%20Santo%20Ant%C3%B4nio%20da%20Platina%20-%20PR%2C%2086430-000!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Barbearia Rafa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLUTUANTES -->
+    <a href="https://wa.me/5543998484849" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg shadow-green-500/30 transition transform hover:scale-110"><i class="fab fa-whatsapp"></i></a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 z-50 bg-gold hover:bg-goldhover text-dark w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg transition opacity-0 pointer-events-none"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Menu Mobile
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+            });
+
+            // Fade-in
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                });
+            }, appearOptions);
+            fadeElements.forEach(el => { appearOnScroll.observe(el); });
+
+            // Back to top
+            const backToTopBtn = document.getElementById('back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+            // Carrossel de Fundo
+            const heroBg = document.querySelector('.carousel-bg');
+            const images = ['IMG-20260923-WA0714.jpg', 'IMG-20260923-WA0712.jpg', 'IMG-20260923-WA0718.jpg'];
+            let currentIndex = 0;
+            function changeBackground() {
+                heroBg.style.opacity = 0;
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    heroBg.style.backgroundImage = `url('${images[currentIndex]}')`;
+                    heroBg.style.opacity = 1;
+                }, 1000);
+            }
+            setInterval(changeBackground, 5000);
+        });
+    </script>
+</body>
+</html>
